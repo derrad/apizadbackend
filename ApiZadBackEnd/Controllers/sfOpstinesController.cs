@@ -15,19 +15,27 @@ using ApiZadBackEnd.Models;
 namespace ApiZadBackEnd.Controllers
 {
     [EnableCors(origins: "http://localhost:4200", headers: "*", methods: "*")]
-    public class sfOpstinesController : ApiController
+    public class opstineController : ApiController
     {
         private ZadrugaEntities db = new ZadrugaEntities();
 
-        // GET: api/sfOpstines
-        public IQueryable<sfOpstine> GetsfOpstine()
+        // GET: api/opstines
+        //public IQueryable<sfOpstine> Getopstine()
+        //{
+        //    return db.sfOpstine.Include(d=>d.Drzava).AsQueryable();
+        //}
+        [ResponseType(typeof(ReturnData))]
+        public async Task<IHttpActionResult> Getopstine()
         {
-            return db.sfOpstine.Include(d=>d.Drzava).AsQueryable();
+
+            var result = await db.sfOpstine.Include(d => d.Drzava).ToArrayAsync();
+            return Json(content: new ReturnData { success = true, message = "Successfully", data = result });
+            //return db.sfMesta.Include(d => d.Opstina).Include(d => d.Opstina.Drzava).AsEnumerable();
         }
 
-        // GET: api/sfOpstines/5
+        // GET: api/opstine/5
         [ResponseType(typeof(sfOpstine))]
-        public async Task<IHttpActionResult> GetsfOpstine(int id)
+        public async Task<IHttpActionResult> Getopstine(int id)
         {
             sfOpstine sfOpstine = await db.sfOpstine.FindAsync(id);
             if (sfOpstine == null)
@@ -38,9 +46,9 @@ namespace ApiZadBackEnd.Controllers
             return Ok(sfOpstine);
         }
 
-        // PUT: api/sfOpstines/5
+        // PUT: api/opstine/5
         [ResponseType(typeof(void))]
-        public async Task<IHttpActionResult> PutsfOpstine(int id, sfOpstine sfOpstine)
+        public async Task<IHttpActionResult> Putopstine(int id, sfOpstine sfOpstine)
         {
             if (!ModelState.IsValid)
             {
@@ -73,9 +81,9 @@ namespace ApiZadBackEnd.Controllers
             return StatusCode(HttpStatusCode.NoContent);
         }
 
-        // POST: api/sfOpstines
+        // POST: api/opstine
         [ResponseType(typeof(sfOpstine))]
-        public async Task<IHttpActionResult> PostsfOpstine(sfOpstine sfOpstine)
+        public async Task<IHttpActionResult> Postopstine(sfOpstine sfOpstine)
         {
             if (!ModelState.IsValid)
             {
@@ -88,9 +96,9 @@ namespace ApiZadBackEnd.Controllers
             return CreatedAtRoute("DefaultApi", new { id = sfOpstine.OpstineID }, sfOpstine);
         }
 
-        // DELETE: api/sfOpstines/5
+        // DELETE: api/opstine/5
         [ResponseType(typeof(sfOpstine))]
-        public async Task<IHttpActionResult> DeletesfOpstine(int id)
+        public async Task<IHttpActionResult> Deleteopstine(int id)
         {
             sfOpstine sfOpstine = await db.sfOpstine.FindAsync(id);
             if (sfOpstine == null)
