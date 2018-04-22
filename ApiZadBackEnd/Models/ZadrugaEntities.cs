@@ -16,6 +16,7 @@ namespace ApiZadBackEnd.Models
 
         }
 
+        public DbSet<sfBanke> sfBanke { get; set; }
         public DbSet<sfDrzave> sfDrzave { get; set; }
         public DbSet<sfMesta> sfMesta { get; set; }
         public DbSet<sfOpstine> sfOpstine { get; set; }

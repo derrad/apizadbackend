@@ -72,7 +72,13 @@ namespace ApiZadBackEnd.Migrations
 
            );
 
+            context.sfBanke.AddOrUpdate(x => x.BankeID,
+             new sfBanke() { BankeID = 1,  Naziv = "Banka Inteza", Racun = "160-959-6999", NameUser = "System", created_at = DateTime.Now },
+             new sfBanke() { BankeID = 2,  Naziv = "Aik Banka", Racun = "150-985-9699", NameUser = "System", created_at = DateTime.Now },
+             new sfBanke() { BankeID = 3,  Naziv = "Aik Banka1", Racun = "150-6985-9699", NameUser = "System", created_at = DateTime.Now }
+            
 
+          );
 
 
         }

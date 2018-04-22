@@ -1,16 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel;
 
 namespace ApiZadBackEnd.Models
 {
-    [Table("sfDrzave")]
-    public class sfDrzave
+    [Table("sfBanke")]
+    public class sfBanke
     {
+
         private const string lenghFieldError = "Polje {0} mora imati minimum {2} karaktera a maksimum {1} !";
         private const string requiredFiledErrot = "Za polje {0} je obavezan unos !!!";
 
@@ -18,17 +19,18 @@ namespace ApiZadBackEnd.Models
         [ScaffoldColumn(false)]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Display(Name = "ID")]
-        public int DrzaveID { set; get; }
+        public int BankeID { set; get; }
 
-        public sfDrzave()
+        public sfBanke()
         {
+           
         }
 
         [Required(ErrorMessage = requiredFiledErrot)]
-        [StringLength(3, ErrorMessage = lenghFieldError, MinimumLength = 1)]
-        [Display(Name = "Kod drzave")]
-        [Column("KodDrzave", Order = 1)]
-        public string KodDrzave { set; get; }
+        [StringLength(100,ErrorMessage = lenghFieldError, MinimumLength = 1)]
+        [Display(Name = "Racun")]
+        [Column("Racun", Order = 1)]
+        public string Racun { set; get; }
 
         [Required(ErrorMessage = requiredFiledErrot)]
         [StringLength(100, ErrorMessage = lenghFieldError, MinimumLength = 1)]
@@ -36,10 +38,10 @@ namespace ApiZadBackEnd.Models
         [Column("Naziv", Order = 2)]
         public string Naziv { set; get; }
 
-        [Display(Name = "Clan Eu")]
-        [Column("EuClan", Order = 3)]
         [DefaultValue(false)]
-        public bool EuClan { set; get; }
+        [Display(Name = "Aktivana")]
+        [Column("Aktivan", Order = 3)]
+        public bool Aktivan { set; get; }
 
         [Display(Name = "Opis")]
         [DataType(DataType.MultilineText)]
@@ -64,7 +66,5 @@ namespace ApiZadBackEnd.Models
         [ConcurrencyCheck]
         [ScaffoldColumn(false)]
         public byte[] RowVersion { set; get; }
-
-      
     }
 }
