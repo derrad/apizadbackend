@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel;
 
 namespace ApiZadBackEnd.Models
 {
@@ -16,6 +17,7 @@ namespace ApiZadBackEnd.Models
 
         public sfOpstine()
         {
+            created_at = DateTime.Now;
         }
 
         [Key]
@@ -37,7 +39,7 @@ namespace ApiZadBackEnd.Models
         [Display(Name = "Naziv")]
         public string Naziv { set; get; }
 
-        [Display(Name = "Oznaka")]
+        [Display(Name = "Reg Oznaka")]
         [Required(ErrorMessage = requiredFiledErrot)]
         [StringLength(3, ErrorMessage = lenghFieldError, MinimumLength = 1)]
         [Column("RegOzn", Order = 3)]
@@ -66,7 +68,7 @@ namespace ApiZadBackEnd.Models
         [Column("Opis", Order = 7)]
         public string Opis { set; get; }
 
-
+       // [DefaultValue(DateTime.Now)]
         [ScaffoldColumn(false)]
         [Display(Name = "Datum kreiranja")]
         public DateTime? created_at { set; get; }
