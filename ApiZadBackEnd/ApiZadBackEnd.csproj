@@ -198,6 +198,20 @@
     <Compile Include="Migrations\201804220903260_Banke1UpdatePolje.Designer.cs">
       <DependentUpon>201804220903260_Banke1UpdatePolje.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201805261200033_table1.cs" />
+    <Compile Include="Migrations\201805261200033_table1.Designer.cs">
+      <DependentUpon>201805261200033_table1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805261350369_ulazpdv.cs" />
+    <Compile Include="Migrations\201805261350369_ulazpdv.Designer.cs">
+      <DependentUpon>201805261350369_ulazpdv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PoPdvTab1.cs" />
+    <Compile Include="Models\PoPdvTab2.cs" />
+    <Compile Include="Models\PoPdvTab3.cs" />
+    <Compile Include="Models\PoPdvTab3A.cs" />
+    <Compile Include="Models\PoPdvTab4.cs" />
+    <Compile Include="Models\PoPdvTab5.cs" />
     <Compile Include="Models\ReturnData.cs" />
     <Compile Include="Controllers\sfDrzavesController.cs" />
     <Compile Include="Controllers\sfMestasController.cs" />
@@ -334,6 +348,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201804220903260_Banke1UpdatePolje.resx">
       <DependentUpon>201804220903260_Banke1UpdatePolje.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805261200033_table1.resx">
+      <DependentUpon>201805261200033_table1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805261350369_ulazpdv.resx">
+      <DependentUpon>201805261350369_ulazpdv.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
