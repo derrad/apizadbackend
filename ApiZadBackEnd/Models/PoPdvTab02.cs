@@ -9,8 +9,8 @@ using System.ComponentModel;
 
 namespace ApiZadBackEnd.Models
 {
-    [Table("PoPdvTab2")]
-    public class PoPdvTab2
+    [Table("PoPdvTab02")]
+    public class PoPdvTab02
     {
 
         private const string requiredFiledErrot = "Za polje {0} je obavezan unos !!!";
@@ -19,9 +19,9 @@ namespace ApiZadBackEnd.Models
         [ScaffoldColumn(false)]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Display(Name = "ID")]
-        public int PoPdvTab2ID { set; get; }
+        public int PoPdvTab02ID { set; get; }
 
-        public PoPdvTab2()
+        public PoPdvTab02()
         {
 
         }
@@ -31,7 +31,12 @@ namespace ApiZadBackEnd.Models
         public string Oznaka { set; get; }
 
         [Required(ErrorMessage = requiredFiledErrot)]
-        [StringLength(100, ErrorMessage = "Duzina do 100")]
+        [StringLength(200, ErrorMessage = "Duzina do 200")]
+        public string ParentDesc { set; get; }
+
+
+        [Required(ErrorMessage = requiredFiledErrot)]
+        [StringLength(200, ErrorMessage = "Duzina do 200")]
         public string Desc { set; get; }
 
         [Required(ErrorMessage = requiredFiledErrot)]
@@ -45,6 +50,19 @@ namespace ApiZadBackEnd.Models
         [Required(ErrorMessage = requiredFiledErrot)]
         //[DefaultValue(false)]
         public bool BoldPozic { set; get; }
+
+        [Required(ErrorMessage = requiredFiledErrot)]
+        [DefaultValue(false)]
+        public bool ObrPolje { set; get; }
+
+        [Required(ErrorMessage = requiredFiledErrot)]
+        [DefaultValue(false)]
+        public bool UnosPolje { set; get; }
+
+        [Required(ErrorMessage = requiredFiledErrot)]
+        [DefaultValue(false)]
+        public bool NaslovPolje { set; get; }
+
 
         [ScaffoldColumn(false)]
         [Display(Name = "Datum kreiranja")]

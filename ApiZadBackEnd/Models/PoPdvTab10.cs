@@ -6,10 +6,11 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel;
 
+
 namespace ApiZadBackEnd.Models
 {
-    [Table("PoPdvTab1")]
-    public class PoPdvTab1
+    [Table("PoPdvTab10")]
+    public class PoPdvTab10
     {
         private const string requiredFiledErrot = "Za polje {0} je obavezan unos !!!";
 
@@ -17,9 +18,9 @@ namespace ApiZadBackEnd.Models
         [ScaffoldColumn(false)]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Display(Name = "ID")]
-        public int PoPdvTab1ID { set; get; }
+        public int PoPdvTab10ID { set; get; }
 
-        public PoPdvTab1()
+        public PoPdvTab10()
         {
 
         }
@@ -29,12 +30,16 @@ namespace ApiZadBackEnd.Models
         public string Oznaka { set; get; }
 
         [Required(ErrorMessage = requiredFiledErrot)]
-        [StringLength(100, ErrorMessage = "Duzina do 100")]
+        [StringLength(200, ErrorMessage = "Duzina do 200")]
+        public string ParentDesc { set; get; }
+
+        [Required(ErrorMessage = requiredFiledErrot)]
+        [StringLength(200, ErrorMessage = "Duzina do 200")]
         public string Desc { set; get; }
 
         [Required(ErrorMessage = requiredFiledErrot)]
         [DefaultValue(0)]
-        public decimal Naknada { set; get; }
+        public decimal Iznos { set; get; }
 
         [DefaultValue(1)]
         [Required(ErrorMessage = requiredFiledErrot)]
@@ -43,6 +48,19 @@ namespace ApiZadBackEnd.Models
         [Required(ErrorMessage = requiredFiledErrot)]
         [DefaultValue(false)]
         public bool BoldPozic { set; get; }
+
+        [Required(ErrorMessage = requiredFiledErrot)]
+        [DefaultValue(false)]
+        public bool ObrPolje { set; get; }
+
+        [Required(ErrorMessage = requiredFiledErrot)]
+        [DefaultValue(false)]
+        public bool UnosPolje { set; get; }
+
+        [Required(ErrorMessage = requiredFiledErrot)]
+        [DefaultValue(false)]
+        public bool NaslovPolje { set; get; }
+
 
         [ScaffoldColumn(false)]
         [Display(Name = "Datum kreiranja")]
@@ -53,6 +71,4 @@ namespace ApiZadBackEnd.Models
         public int KORISNIK_ID { set; get; }
 
     }
-
-
 }

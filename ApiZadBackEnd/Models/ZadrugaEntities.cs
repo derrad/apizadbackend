@@ -20,12 +20,22 @@ namespace ApiZadBackEnd.Models
         public DbSet<sfDrzave> sfDrzave { get; set; }
         public DbSet<sfMesta> sfMesta { get; set; }
         public DbSet<sfOpstine> sfOpstine { get; set; }
-        public DbSet<PoPdvTab1> PoPdvTab1 { get; set; }
-        public DbSet<PoPdvTab2> PoPdvTab2 { get; set; }
-        public DbSet<PoPdvTab3> PoPdvTab3 { get; set; }
-        public DbSet<PoPdvTab3A> PoPdvTab3A { get; set; }
-        public DbSet<PoPdvTab4> PoPdvTab4 { get; set; }
-        public DbSet<PoPdvTab5> PoPdvTab5 { get; set; }
+        public DbSet<PoPdvTab01> PoPdvTab01 { get; set; }
+        public DbSet<PoPdvTab02> PoPdvTab02 { get; set; }
+        public DbSet<PoPdvTab03> PoPdvTab03 { get; set; }
+        public DbSet<PoPdvTab03A> PoPdvTab03A { get; set; }
+        public DbSet<PoPdvTab04> PoPdvTab04 { get; set; }
+        public DbSet<PoPdvTab05> PoPdvTab05 { get; set; }
+        public DbSet<PoPdvTab06> PoPdvTab06 { get; set; }
+        public DbSet<PoPdvTab07> PoPdvTab07 { get; set; }
+        public DbSet<PoPdvTab08> PoPdvTab08 { get; set; }
+
+        public DbSet<PoPdvTab09> PoPdvTab09 { get; set; }
+        public DbSet<PoPdvTab10> PoPdvTab10 { get; set; }
+        public DbSet<PoPdvTab11> PoPdvTab11 { get; set; }
+
+
+
 
         protected override void OnModelCreating(DbModelBuilder ModelBuilder)
         {

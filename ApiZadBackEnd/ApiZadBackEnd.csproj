@@ -206,12 +206,18 @@
     <Compile Include="Migrations\201805261350369_ulazpdv.Designer.cs">
       <DependentUpon>201805261350369_ulazpdv.cs</DependentUpon>
     </Compile>
-    <Compile Include="Models\PoPdvTab1.cs" />
-    <Compile Include="Models\PoPdvTab2.cs" />
-    <Compile Include="Models\PoPdvTab3.cs" />
-    <Compile Include="Models\PoPdvTab3A.cs" />
-    <Compile Include="Models\PoPdvTab4.cs" />
-    <Compile Include="Models\PoPdvTab5.cs" />
+    <Compile Include="Models\PoPdvTab01.cs" />
+    <Compile Include="Models\PoPdvTab02.cs" />
+    <Compile Include="Models\PoPdvTab03.cs" />
+    <Compile Include="Models\PoPdvTab03A.cs" />
+    <Compile Include="Models\PoPdvTab10.cs" />
+    <Compile Include="Models\PoPdvTab11.cs" />
+    <Compile Include="Models\PoPdvTab09.cs" />
+    <Compile Include="Models\PoPdvTab08.cs" />
+    <Compile Include="Models\PoPdvTab07.cs" />
+    <Compile Include="Models\PoPdvTab04.cs" />
+    <Compile Include="Models\PoPdvTab06.cs" />
+    <Compile Include="Models\PoPdvTab05.cs" />
     <Compile Include="Models\ReturnData.cs" />
     <Compile Include="Controllers\sfDrzavesController.cs" />
     <Compile Include="Controllers\sfMestasController.cs" />

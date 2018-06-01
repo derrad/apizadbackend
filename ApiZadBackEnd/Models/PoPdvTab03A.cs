@@ -6,36 +6,46 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel;
 
-
 namespace ApiZadBackEnd.Models
 {
-    [Table("PoPdvTab5")]
-    public class PoPdvTab5
+    [Table("PoPdvTab03A")]
+    public class PoPdvTab03A
     {
+
         private const string requiredFiledErrot = "Za polje {0} je obavezan unos !!!";
 
         [Key]
         [ScaffoldColumn(false)]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Display(Name = "ID")]
-        public int PoPdvTab5ID { set; get; }
+        public int PoPdvTab03AID { set; get; }
 
-        public PoPdvTab5()
+        public PoPdvTab03A()
         {
 
         }
 
-        //[Required(ErrorMessage = requiredFiledErrot)]
-        //[StringLength(10, ErrorMessage = "Duzina do 10")]
+        [Required(ErrorMessage = requiredFiledErrot)]
+        [StringLength(10, ErrorMessage = "Duzina do 10")]
         public string Oznaka { set; get; }
 
-        //[Required(ErrorMessage = requiredFiledErrot)]
-        //[StringLength(100, ErrorMessage = "Duzina do 100")]
+        [Required(ErrorMessage = requiredFiledErrot)]
+        [StringLength(200, ErrorMessage = "Duzina do 200")]
+        public string ParentDesc { set; get; }
+
+
+        [Required(ErrorMessage = requiredFiledErrot)]
+        [StringLength(200, ErrorMessage = "Duzina do 200")]
         public string Desc { set; get; }
 
         [Required(ErrorMessage = requiredFiledErrot)]
         [DefaultValue(0)]
-        public decimal Iznos { set; get; }
+        public decimal OS_pdv { set; get; }
+               
+        [Required(ErrorMessage = requiredFiledErrot)]
+        [DefaultValue(0)]
+        public decimal PS_pdv { set; get; }
+
 
         [DefaultValue(1)]
         [Required(ErrorMessage = requiredFiledErrot)]
@@ -45,7 +55,18 @@ namespace ApiZadBackEnd.Models
         [DefaultValue(false)]
         public bool BoldPozic { set; get; }
 
-    
+        [Required(ErrorMessage = requiredFiledErrot)]
+        [DefaultValue(false)]
+        public bool ObrPolje { set; get; }
+
+        [Required(ErrorMessage = requiredFiledErrot)]
+        [DefaultValue(false)]
+        public bool UnosPolje { set; get; }
+
+        [Required(ErrorMessage = requiredFiledErrot)]
+        [DefaultValue(false)]
+        public bool NaslovPolje { set; get; }
+
 
         [ScaffoldColumn(false)]
         [Display(Name = "Datum kreiranja")]
@@ -54,6 +75,9 @@ namespace ApiZadBackEnd.Models
         [ScaffoldColumn(false)]
         [Display(Name = "Ime korisnika")]
         public int KORISNIK_ID { set; get; }
+
+
+
 
     }
 }
