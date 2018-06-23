@@ -206,6 +206,10 @@
     <Compile Include="Migrations\201805261350369_ulazpdv.Designer.cs">
       <DependentUpon>201805261350369_ulazpdv.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201806170936272_Initial1.cs" />
+    <Compile Include="Migrations\201806170936272_Initial1.Designer.cs">
+      <DependentUpon>201806170936272_Initial1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\PoPdvTab01.cs" />
     <Compile Include="Models\PoPdvTab02.cs" />
     <Compile Include="Models\PoPdvTab03.cs" />
@@ -360,6 +364,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201805261350369_ulazpdv.resx">
       <DependentUpon>201805261350369_ulazpdv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806170936272_Initial1.resx">
+      <DependentUpon>201806170936272_Initial1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
