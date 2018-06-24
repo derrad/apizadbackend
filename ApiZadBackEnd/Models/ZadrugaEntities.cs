@@ -33,9 +33,10 @@ namespace ApiZadBackEnd.Models
         public DbSet<PoPdvTab09> PoPdvTab09 { get; set; }
         public DbSet<PoPdvTab10> PoPdvTab10 { get; set; }
         public DbSet<PoPdvTab11> PoPdvTab11 { get; set; }
-
-
-
+        //PoPdvTabGreska
+        public DbSet<PoPdvTabGreska> PoPdvTabGreska { get; set; }
+        //LabelPoPdv
+        public DbSet<LabelPoPdv> LabelPoPdv { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder ModelBuilder)
         {

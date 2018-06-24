@@ -7,13 +7,13 @@ namespace ApiZadBackEnd.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class Banke1UpdatePolje : IMigrationMetadata
+    public sealed partial class Initial : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(Banke1UpdatePolje));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(Initial));
         
         string IMigrationMetadata.Id
         {
-            get { return "201804220903260_Banke1UpdatePolje"; }
+            get { return "201806240728261_Initial"; }
         }
         
         string IMigrationMetadata.Source

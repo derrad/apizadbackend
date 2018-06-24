@@ -190,30 +190,16 @@
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\bankeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Migrations\201804220849249_Banke.cs" />
-    <Compile Include="Migrations\201804220849249_Banke.Designer.cs">
-      <DependentUpon>201804220849249_Banke.cs</DependentUpon>
+    <Compile Include="Migrations\201806240728261_Initial.cs" />
+    <Compile Include="Migrations\201806240728261_Initial.Designer.cs">
+      <DependentUpon>201806240728261_Initial.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201804220903260_Banke1UpdatePolje.cs" />
-    <Compile Include="Migrations\201804220903260_Banke1UpdatePolje.Designer.cs">
-      <DependentUpon>201804220903260_Banke1UpdatePolje.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201805261200033_table1.cs" />
-    <Compile Include="Migrations\201805261200033_table1.Designer.cs">
-      <DependentUpon>201805261200033_table1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201805261350369_ulazpdv.cs" />
-    <Compile Include="Migrations\201805261350369_ulazpdv.Designer.cs">
-      <DependentUpon>201805261350369_ulazpdv.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201806170936272_Initial1.cs" />
-    <Compile Include="Migrations\201806170936272_Initial1.Designer.cs">
-      <DependentUpon>201806170936272_Initial1.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Models\LabelPoPdv.cs" />
     <Compile Include="Models\PoPdvTab01.cs" />
     <Compile Include="Models\PoPdvTab02.cs" />
     <Compile Include="Models\PoPdvTab03.cs" />
     <Compile Include="Models\PoPdvTab03A.cs" />
+    <Compile Include="Models\PoPdvTabGreska.cs" />
     <Compile Include="Models\PoPdvTab10.cs" />
     <Compile Include="Models\PoPdvTab11.cs" />
     <Compile Include="Models\PoPdvTab09.cs" />
@@ -228,10 +214,6 @@
     <Compile Include="Controllers\sfOpstinesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201804211740311_Initial.cs" />
-    <Compile Include="Migrations\201804211740311_Initial.Designer.cs">
-      <DependentUpon>201804211740311_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\sfBanke.cs" />
@@ -350,23 +332,8 @@
     <TypeScriptCompile Include="Scripts\index.d.ts" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201804211740311_Initial.resx">
-      <DependentUpon>201804211740311_Initial.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201804220849249_Banke.resx">
-      <DependentUpon>201804220849249_Banke.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201804220903260_Banke1UpdatePolje.resx">
-      <DependentUpon>201804220903260_Banke1UpdatePolje.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201805261200033_table1.resx">
-      <DependentUpon>201805261200033_table1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201805261350369_ulazpdv.resx">
-      <DependentUpon>201805261350369_ulazpdv.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201806170936272_Initial1.resx">
-      <DependentUpon>201806170936272_Initial1.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201806240728261_Initial.resx">
+      <DependentUpon>201806240728261_Initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -30,14 +30,12 @@ namespace ApiZadBackEnd.Models
         public string Oznaka { set; get; }
 
         [Required(ErrorMessage = requiredFiledErrot)]
-        [StringLength(200, ErrorMessage = "Duzina do 200")]
+        [StringLength(250, ErrorMessage = "Duzina do 250")]
         public string ParentDesc { set; get; }
 
         [Required(ErrorMessage = requiredFiledErrot)]
-        [StringLength(200, ErrorMessage = "Duzina do 200")]
+        [StringLength(250, ErrorMessage = "Duzina do 250")]
         public string Desc { set; get; }
-
-    
 
         [Required(ErrorMessage = requiredFiledErrot)]
         [DefaultValue(0)]
@@ -46,8 +44,7 @@ namespace ApiZadBackEnd.Models
         [Required(ErrorMessage = requiredFiledErrot)]
         [DefaultValue(0)]
         public decimal OS_pdv { set; get; }
-
-
+        
         [Required(ErrorMessage = requiredFiledErrot)]
         [DefaultValue(0)]
         public decimal PS_osnov { set; get; }
@@ -85,6 +82,9 @@ namespace ApiZadBackEnd.Models
         [DefaultValue(false)]
         public bool NaslovPolje { set; get; }
 
+
+       
+        public string Napomena { set; get; }
 
         [ScaffoldColumn(false)]
         [Display(Name = "Datum kreiranja")]

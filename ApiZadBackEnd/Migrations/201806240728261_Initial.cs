@@ -3,7 +3,7 @@ namespace ApiZadBackEnd.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class Initial1 : DbMigration
+    public partial class Initial : DbMigration
     {
         public override void Up()
         {
@@ -21,6 +21,7 @@ namespace ApiZadBackEnd.Migrations
                         ObrPolje = c.Boolean(nullable: false),
                         UnosPolje = c.Boolean(nullable: false),
                         NaslovPolje = c.Boolean(nullable: false),
+                        Napomena = c.String(),
                         created_at = c.DateTime(),
                         KORISNIK_ID = c.Int(nullable: false),
                     })
@@ -40,6 +41,7 @@ namespace ApiZadBackEnd.Migrations
                         ObrPolje = c.Boolean(nullable: false),
                         UnosPolje = c.Boolean(nullable: false),
                         NaslovPolje = c.Boolean(nullable: false),
+                        Napomena = c.String(),
                         created_at = c.DateTime(),
                         KORISNIK_ID = c.Int(nullable: false),
                         Vazno = c.Int(nullable: false),
@@ -63,6 +65,7 @@ namespace ApiZadBackEnd.Migrations
                         ObrPolje = c.Boolean(nullable: false),
                         UnosPolje = c.Boolean(nullable: false),
                         NaslovPolje = c.Boolean(nullable: false),
+                        Napomena = c.String(),
                         created_at = c.DateTime(),
                         KORISNIK_ID = c.Int(nullable: false),
                     })
@@ -83,6 +86,7 @@ namespace ApiZadBackEnd.Migrations
                         ObrPolje = c.Boolean(nullable: false),
                         UnosPolje = c.Boolean(nullable: false),
                         NaslovPolje = c.Boolean(nullable: false),
+                        Napomena = c.String(),
                         created_at = c.DateTime(),
                         KORISNIK_ID = c.Int(nullable: false),
                     })
@@ -107,6 +111,7 @@ namespace ApiZadBackEnd.Migrations
                         ObrPolje = c.Boolean(nullable: false),
                         UnosPolje = c.Boolean(nullable: false),
                         NaslovPolje = c.Boolean(nullable: false),
+                        Napomena = c.String(),
                         created_at = c.DateTime(),
                         KORISNIK_ID = c.Int(nullable: false),
                     })
@@ -126,6 +131,7 @@ namespace ApiZadBackEnd.Migrations
                         ObrPolje = c.Boolean(nullable: false),
                         UnosPolje = c.Boolean(nullable: false),
                         NaslovPolje = c.Boolean(nullable: false),
+                        Napomena = c.String(),
                         created_at = c.DateTime(),
                         KORISNIK_ID = c.Int(nullable: false),
                     })
@@ -147,6 +153,7 @@ namespace ApiZadBackEnd.Migrations
                         ObrPolje = c.Boolean(nullable: false),
                         UnosPolje = c.Boolean(nullable: false),
                         NaslovPolje = c.Boolean(nullable: false),
+                        Napomena = c.String(),
                         created_at = c.DateTime(),
                         KORISNIK_ID = c.Int(nullable: false),
                     })
@@ -167,6 +174,7 @@ namespace ApiZadBackEnd.Migrations
                         ObrPolje = c.Boolean(nullable: false),
                         UnosPolje = c.Boolean(nullable: false),
                         NaslovPolje = c.Boolean(nullable: false),
+                        Napomena = c.String(),
                         created_at = c.DateTime(),
                         KORISNIK_ID = c.Int(nullable: false),
                     })
@@ -178,8 +186,8 @@ namespace ApiZadBackEnd.Migrations
                     {
                         PoPdvTab08ID = c.Int(nullable: false, identity: true),
                         Oznaka = c.String(nullable: false, maxLength: 10),
-                        ParentDesc = c.String(nullable: false, maxLength: 200),
-                        Desc = c.String(nullable: false, maxLength: 200),
+                        ParentDesc = c.String(nullable: false, maxLength: 250),
+                        Desc = c.String(nullable: false, maxLength: 250),
                         OS_osnov = c.Decimal(nullable: false, precision: 18, scale: 2),
                         OS_pdv = c.Decimal(nullable: false, precision: 18, scale: 2),
                         PS_osnov = c.Decimal(nullable: false, precision: 18, scale: 2),
@@ -191,6 +199,7 @@ namespace ApiZadBackEnd.Migrations
                         ObrPolje = c.Boolean(nullable: false),
                         UnosPolje = c.Boolean(nullable: false),
                         NaslovPolje = c.Boolean(nullable: false),
+                        Napomena = c.String(),
                         created_at = c.DateTime(),
                         KORISNIK_ID = c.Int(nullable: false),
                     })
@@ -210,6 +219,7 @@ namespace ApiZadBackEnd.Migrations
                         ObrPolje = c.Boolean(nullable: false),
                         UnosPolje = c.Boolean(nullable: false),
                         NaslovPolje = c.Boolean(nullable: false),
+                        Napomena = c.String(),
                         created_at = c.DateTime(),
                         KORISNIK_ID = c.Int(nullable: false),
                     })
@@ -229,6 +239,7 @@ namespace ApiZadBackEnd.Migrations
                         ObrPolje = c.Boolean(nullable: false),
                         UnosPolje = c.Boolean(nullable: false),
                         NaslovPolje = c.Boolean(nullable: false),
+                        Napomena = c.String(),
                         created_at = c.DateTime(),
                         KORISNIK_ID = c.Int(nullable: false),
                     })
@@ -248,122 +259,121 @@ namespace ApiZadBackEnd.Migrations
                         ObrPolje = c.Boolean(nullable: false),
                         UnosPolje = c.Boolean(nullable: false),
                         NaslovPolje = c.Boolean(nullable: false),
+                        Napomena = c.String(),
                         created_at = c.DateTime(),
                         KORISNIK_ID = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.PoPdvTab11ID);
             
-            DropTable("dbo.PoPdvTab1");
-            DropTable("dbo.PoPdvTab2");
-            DropTable("dbo.PoPdvTab3");
-            DropTable("dbo.PoPdvTab3A");
-            DropTable("dbo.PoPdvTab4");
-            DropTable("dbo.PoPdvTab5");
+            CreateTable(
+                "dbo.PoPdvTabGreska",
+                c => new
+                    {
+                        PoPdvTabGreskaID = c.Int(nullable: false, identity: true),
+                        Oznaka = c.String(nullable: false, maxLength: 10),
+                        ParentDesc = c.String(nullable: false, maxLength: 250),
+                        Desc = c.String(nullable: false, maxLength: 250),
+                        OS_osnov = c.Decimal(nullable: false, precision: 18, scale: 2),
+                        OS_pdv = c.Decimal(nullable: false, precision: 18, scale: 2),
+                        PS_osnov = c.Decimal(nullable: false, precision: 18, scale: 2),
+                        PS_pdv = c.Decimal(nullable: false, precision: 18, scale: 2),
+                        Naknada = c.Decimal(nullable: false, precision: 18, scale: 2),
+                        Iznos = c.Decimal(nullable: false, precision: 18, scale: 2),
+                        RedPrikaza = c.Int(nullable: false),
+                        BoldPozic = c.Boolean(nullable: false),
+                        ObrPolje = c.Boolean(nullable: false),
+                        UnosPolje = c.Boolean(nullable: false),
+                        NaslovPolje = c.Boolean(nullable: false),
+                        Napomena = c.String(),
+                        created_at = c.DateTime(),
+                        KORISNIK_ID = c.Int(nullable: false),
+                    })
+                .PrimaryKey(t => t.PoPdvTabGreskaID);
+            
+            CreateTable(
+                "dbo.sfBanke",
+                c => new
+                    {
+                        Racun = c.String(nullable: false, maxLength: 100),
+                        Naziv = c.String(nullable: false, maxLength: 100),
+                        Aktivan = c.Boolean(nullable: false),
+                        Opis = c.String(),
+                        BankeID = c.Int(nullable: false, identity: true),
+                        created_at = c.DateTime(),
+                        NameUser = c.String(),
+                        updatedAt = c.DateTime(),
+                        RowVersion = c.Binary(nullable: false, fixedLength: true, timestamp: true, storeType: "rowversion"),
+                    })
+                .PrimaryKey(t => t.BankeID);
+            
+            CreateTable(
+                "dbo.sfDrzave",
+                c => new
+                    {
+                        KodDrzave = c.String(nullable: false, maxLength: 3),
+                        Naziv = c.String(nullable: false, maxLength: 100),
+                        EuClan = c.Boolean(nullable: false),
+                        Opis = c.String(),
+                        DrzaveID = c.Int(nullable: false, identity: true),
+                        created_at = c.DateTime(),
+                        NameUser = c.String(),
+                        updatedAt = c.DateTime(),
+                        RowVersion = c.Binary(nullable: false, fixedLength: true, timestamp: true, storeType: "rowversion"),
+                    })
+                .PrimaryKey(t => t.DrzaveID);
+            
+            CreateTable(
+                "dbo.sfMesta",
+                c => new
+                    {
+                        OpstineID = c.Int(nullable: false),
+                        Naziv = c.String(nullable: false, maxLength: 100),
+                        Ptt = c.String(nullable: false, maxLength: 50),
+                        Opis = c.String(),
+                        MestaID = c.Int(nullable: false, identity: true),
+                        created_at = c.DateTime(),
+                        NameUser = c.String(),
+                        updatedAt = c.DateTime(),
+                        RowVersion = c.Binary(nullable: false, fixedLength: true, timestamp: true, storeType: "rowversion"),
+                    })
+                .PrimaryKey(t => t.MestaID)
+                .ForeignKey("dbo.sfOpstine", t => t.OpstineID, cascadeDelete: true)
+                .Index(t => t.OpstineID);
+            
+            CreateTable(
+                "dbo.sfOpstine",
+                c => new
+                    {
+                        DrzaveID = c.Int(nullable: false),
+                        Naziv = c.String(nullable: false, maxLength: 100),
+                        RegOzn = c.String(nullable: false, maxLength: 3),
+                        SifPorez = c.String(maxLength: 50),
+                        KontBr = c.String(maxLength: 50),
+                        PozivNaBr = c.String(maxLength: 50),
+                        Opis = c.String(),
+                        OpstineID = c.Int(nullable: false, identity: true),
+                        created_at = c.DateTime(),
+                        NameUser = c.String(),
+                        updatedAt = c.DateTime(),
+                        RowVersion = c.Binary(nullable: false, fixedLength: true, timestamp: true, storeType: "rowversion"),
+                    })
+                .PrimaryKey(t => t.OpstineID)
+                .ForeignKey("dbo.sfDrzave", t => t.DrzaveID, cascadeDelete: true)
+                .Index(t => t.DrzaveID);
+            
         }
         
         public override void Down()
         {
-            CreateTable(
-                "dbo.PoPdvTab5",
-                c => new
-                    {
-                        PoPdvTab5ID = c.Int(nullable: false, identity: true),
-                        Oznaka = c.String(),
-                        Desc = c.String(),
-                        Iznos = c.Decimal(nullable: false, precision: 18, scale: 2),
-                        RedPrikaza = c.Int(nullable: false),
-                        BoldPozic = c.Boolean(nullable: false),
-                        created_at = c.DateTime(),
-                        KORISNIK_ID = c.Int(nullable: false),
-                    })
-                .PrimaryKey(t => t.PoPdvTab5ID);
-            
-            CreateTable(
-                "dbo.PoPdvTab4",
-                c => new
-                    {
-                        PoPdvTab4ID = c.Int(nullable: false, identity: true),
-                        Oznaka = c.String(nullable: false, maxLength: 10),
-                        ParentDesc = c.String(nullable: false, maxLength: 100),
-                        Desc = c.String(nullable: false, maxLength: 100),
-                        Osnovica = c.Decimal(nullable: false, precision: 18, scale: 2),
-                        Pdv = c.Decimal(nullable: false, precision: 18, scale: 2),
-                        OS_osnov = c.Decimal(nullable: false, precision: 18, scale: 2),
-                        OS_pdv = c.Decimal(nullable: false, precision: 18, scale: 2),
-                        PS_osnov = c.Decimal(nullable: false, precision: 18, scale: 2),
-                        PS_pdv = c.Decimal(nullable: false, precision: 18, scale: 2),
-                        RedPrikaza = c.Int(nullable: false),
-                        BoldPozic = c.Boolean(nullable: false),
-                        created_at = c.DateTime(),
-                        KORISNIK_ID = c.Int(nullable: false),
-                    })
-                .PrimaryKey(t => t.PoPdvTab4ID);
-            
-            CreateTable(
-                "dbo.PoPdvTab3A",
-                c => new
-                    {
-                        PoPdvTab3AID = c.Int(nullable: false, identity: true),
-                        Oznaka = c.String(nullable: false, maxLength: 10),
-                        Desc = c.String(nullable: false, maxLength: 100),
-                        OS_pdv = c.Decimal(nullable: false, precision: 18, scale: 2),
-                        PS_pdv = c.Decimal(nullable: false, precision: 18, scale: 2),
-                        RedPrikaza = c.Int(nullable: false),
-                        BoldPozic = c.Boolean(nullable: false),
-                        created_at = c.DateTime(),
-                        KORISNIK_ID = c.Int(nullable: false),
-                    })
-                .PrimaryKey(t => t.PoPdvTab3AID);
-            
-            CreateTable(
-                "dbo.PoPdvTab3",
-                c => new
-                    {
-                        PoPdvTab3ID = c.Int(nullable: false, identity: true),
-                        Oznaka = c.String(nullable: false, maxLength: 10),
-                        Desc = c.String(nullable: false, maxLength: 100),
-                        OS_osnov = c.Decimal(nullable: false, precision: 18, scale: 2),
-                        OS_pdv = c.Decimal(nullable: false, precision: 18, scale: 2),
-                        PS_osnov = c.Decimal(nullable: false, precision: 18, scale: 2),
-                        PS_pdv = c.Decimal(nullable: false, precision: 18, scale: 2),
-                        RedPrikaza = c.Int(nullable: false),
-                        BoldPozic = c.Boolean(nullable: false),
-                        created_at = c.DateTime(),
-                        KORISNIK_ID = c.Int(nullable: false),
-                    })
-                .PrimaryKey(t => t.PoPdvTab3ID);
-            
-            CreateTable(
-                "dbo.PoPdvTab2",
-                c => new
-                    {
-                        PoPdvTab2ID = c.Int(nullable: false, identity: true),
-                        Oznaka = c.String(nullable: false, maxLength: 10),
-                        Desc = c.String(nullable: false, maxLength: 100),
-                        Naknada = c.Decimal(nullable: false, precision: 18, scale: 2),
-                        RedPrikaza = c.Int(nullable: false),
-                        BoldPozic = c.Boolean(nullable: false),
-                        created_at = c.DateTime(),
-                        KORISNIK_ID = c.Int(nullable: false),
-                        Vazno = c.Int(nullable: false),
-                    })
-                .PrimaryKey(t => t.PoPdvTab2ID);
-            
-            CreateTable(
-                "dbo.PoPdvTab1",
-                c => new
-                    {
-                        PoPdvTab1ID = c.Int(nullable: false, identity: true),
-                        Oznaka = c.String(nullable: false, maxLength: 10),
-                        Desc = c.String(nullable: false, maxLength: 100),
-                        Naknada = c.Decimal(nullable: false, precision: 18, scale: 2),
-                        RedPrikaza = c.Int(nullable: false),
-                        BoldPozic = c.Boolean(nullable: false),
-                        created_at = c.DateTime(),
-                        KORISNIK_ID = c.Int(nullable: false),
-                    })
-                .PrimaryKey(t => t.PoPdvTab1ID);
-            
+            DropForeignKey("dbo.sfMesta", "OpstineID", "dbo.sfOpstine");
+            DropForeignKey("dbo.sfOpstine", "DrzaveID", "dbo.sfDrzave");
+            DropIndex("dbo.sfOpstine", new[] { "DrzaveID" });
+            DropIndex("dbo.sfMesta", new[] { "OpstineID" });
+            DropTable("dbo.sfOpstine");
+            DropTable("dbo.sfMesta");
+            DropTable("dbo.sfDrzave");
+            DropTable("dbo.sfBanke");
+            DropTable("dbo.PoPdvTabGreska");
             DropTable("dbo.PoPdvTab11");
             DropTable("dbo.PoPdvTab10");
             DropTable("dbo.PoPdvTab09");

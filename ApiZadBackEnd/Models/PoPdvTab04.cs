@@ -83,6 +83,7 @@ namespace ApiZadBackEnd.Models
         [DefaultValue(false)]
         public bool NaslovPolje { set; get; }
 
+        public string Napomena { set; get; }
 
         [ScaffoldColumn(false)]
         [Display(Name = "Datum kreiranja")]
