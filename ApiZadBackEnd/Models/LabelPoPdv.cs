@@ -28,16 +28,16 @@ namespace ApiZadBackEnd.Models
         public int TableID { get; set; }
 
         [Required(ErrorMessage = requiredFiledErrot)]
-        [DefaultValue(false)]
-        public bool ObrPolje { set; get; }
+        [DefaultValue(0)]
+        public System.Int16 ObrPolje { set; get; }
 
         [Required(ErrorMessage = requiredFiledErrot)]
-        [DefaultValue(false)]
-        public bool UnosPolje { set; get; }
+        [DefaultValue(0)]
+        public System.Int16 UnosPolje { set; get; }
 
         [Required(ErrorMessage = requiredFiledErrot)]
-        [DefaultValue(false)]
-        public bool NaslovPolje { set; get; }
+        [DefaultValue(0)]
+        public System.Int16 NaslovPolje { set; get; }
 
         [Required(ErrorMessage = requiredFiledErrot)]
         [StringLength(10, ErrorMessage = "Duzina do 10")]
@@ -56,12 +56,12 @@ namespace ApiZadBackEnd.Models
         public string ImeTab { set; get; }
 
         [Required(ErrorMessage = requiredFiledErrot)]
-        [DefaultValue(false)]
-        public bool UlazPdv { set; get; }
+        [DefaultValue(0)]
+        public System.Int16 UlazPdv { set; get; }
 
         [Required(ErrorMessage = requiredFiledErrot)]
-        [DefaultValue(false)]
-        public bool IzlazPdv { set; get; }
+        [DefaultValue(0)]
+        public System.Int16 IzlazPdv { set; get; }
 
         public string Napomena { set; get; }
 

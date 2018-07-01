@@ -194,12 +194,15 @@
     <Compile Include="Migrations\201806240728261_Initial.Designer.cs">
       <DependentUpon>201806240728261_Initial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201807011730465_Initial1.cs" />
+    <Compile Include="Migrations\201807011730465_Initial1.Designer.cs">
+      <DependentUpon>201807011730465_Initial1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\LabelPoPdv.cs" />
     <Compile Include="Models\PoPdvTab01.cs" />
     <Compile Include="Models\PoPdvTab02.cs" />
     <Compile Include="Models\PoPdvTab03.cs" />
     <Compile Include="Models\PoPdvTab03A.cs" />
-    <Compile Include="Models\PoPdvTabGreska.cs" />
     <Compile Include="Models\PoPdvTab10.cs" />
     <Compile Include="Models\PoPdvTab11.cs" />
     <Compile Include="Models\PoPdvTab09.cs" />
@@ -334,6 +337,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201806240728261_Initial.resx">
       <DependentUpon>201806240728261_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807011730465_Initial1.resx">
+      <DependentUpon>201807011730465_Initial1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

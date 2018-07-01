@@ -40,7 +40,7 @@ namespace ApiZadBackEnd.Models
         public string Desc { set; get; }
 
         [Required(ErrorMessage = requiredFiledErrot)]
-        //[DefaultValue(0)]
+        [DefaultValue(0)]
         public decimal Naknada { set; get; }
 
         //[DefaultValue(1)]
@@ -48,20 +48,20 @@ namespace ApiZadBackEnd.Models
         public int RedPrikaza { set; get; }
 
         [Required(ErrorMessage = requiredFiledErrot)]
-        //[DefaultValue(false)]
-        public bool BoldPozic { set; get; }
+        [DefaultValue(0)]
+        public System.Int16 BoldPozic { set; get; }
 
         [Required(ErrorMessage = requiredFiledErrot)]
-        [DefaultValue(false)]
-        public bool ObrPolje { set; get; }
+        [DefaultValue(0)]
+        public System.Int16 ObrPolje { set; get; }
 
         [Required(ErrorMessage = requiredFiledErrot)]
-        [DefaultValue(false)]
-        public bool UnosPolje { set; get; }
+        [DefaultValue(0)]
+        public System.Int16 UnosPolje { set; get; }
 
         [Required(ErrorMessage = requiredFiledErrot)]
-        [DefaultValue(false)]
-        public bool NaslovPolje { set; get; }
+        [DefaultValue(0)]
+        public System.Int16 NaslovPolje { set; get; }
 
         public string Napomena { set; get; }
 
