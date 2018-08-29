@@ -190,9 +190,9 @@
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\bankeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Migrations\201808290629417_Initial.cs" />
-    <Compile Include="Migrations\201808290629417_Initial.Designer.cs">
-      <DependentUpon>201808290629417_Initial.cs</DependentUpon>
+    <Compile Include="Migrations\201808292052514_Initial.cs" />
+    <Compile Include="Migrations\201808292052514_Initial.Designer.cs">
+      <DependentUpon>201808292052514_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\EPPPDV.cs" />
@@ -346,8 +346,8 @@
     <TypeScriptCompile Include="Scripts\index.d.ts" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201808290629417_Initial.resx">
-      <DependentUpon>201808290629417_Initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201808292052514_Initial.resx">
+      <DependentUpon>201808292052514_Initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

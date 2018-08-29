@@ -13,7 +13,7 @@ namespace ApiZadBackEnd.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201808290629417_Initial"; }
+            get { return "201808292052514_Initial"; }
         }
         
         string IMigrationMetadata.Source

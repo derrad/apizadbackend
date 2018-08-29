@@ -25,6 +25,7 @@ namespace ApiZadBackEnd.Models
         
         public decimal Iznos_11 { set; get; }
         public decimal Iznos_12 { set; get; }
+        public decimal Iznos_13 { set; get; }
         public decimal Iznos_14 { set; get; }
         public decimal Iznos_15 { set; get; }
         public decimal Iznos_16 { set; get; }

@@ -37,6 +37,7 @@ namespace ApiZadBackEnd.Migrations
                         prPPPDV_ID = c.Int(nullable: false),
                         Iznos_11 = c.Decimal(nullable: false, precision: 18, scale: 2),
                         Iznos_12 = c.Decimal(nullable: false, precision: 18, scale: 2),
+                        Iznos_13 = c.Decimal(nullable: false, precision: 18, scale: 2),
                         Iznos_14 = c.Decimal(nullable: false, precision: 18, scale: 2),
                         Iznos_15 = c.Decimal(nullable: false, precision: 18, scale: 2),
                         Iznos_16 = c.Decimal(nullable: false, precision: 18, scale: 2),
