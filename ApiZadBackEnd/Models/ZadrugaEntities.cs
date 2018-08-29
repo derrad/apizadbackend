@@ -38,6 +38,23 @@ namespace ApiZadBackEnd.Models
         //LabelPoPdv
         public DbSet<LabelPoPdv> LabelPoPdv { get; set; }
 
+
+        public DbSet<POPDV1> POPDV1 { get; set; }
+        public DbSet<POPDV2> POPDV2 { get; set; }
+        public DbSet<POPDV3> POPDV3 { get; set; }
+        public DbSet<POPDV3a> POPDV3a { get; set; }
+        public DbSet<POPDV4> POPDV4 { get; set; }
+        public DbSet<POPDV5> POPDV5 { get; set; }
+        public DbSet<POPDV6> POPDV6 { get; set; }
+        public DbSet<POPDV7> POPDV7 { get; set; }
+        public DbSet<POPDV8> POPDV8 { get; set; }
+        public DbSet<POPDV9> POPDV9 { get; set; }
+        public DbSet<POPDV9a> POPDV9a { get; set; }
+
+        public DbSet<POPDV10> POPDV10 { get; set; }
+        public DbSet<POPDV11> POPDV11 { get; set; }
+
+
         protected override void OnModelCreating(DbModelBuilder ModelBuilder)
         {
             ModelBuilder.Conventions.Remove<PluralizingTableNameConvention>();

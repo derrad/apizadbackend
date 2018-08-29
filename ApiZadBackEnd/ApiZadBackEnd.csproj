@@ -190,15 +190,27 @@
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\bankeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Migrations\201806240728261_Initial.cs" />
-    <Compile Include="Migrations\201806240728261_Initial.Designer.cs">
-      <DependentUpon>201806240728261_Initial.cs</DependentUpon>
+    <Compile Include="Migrations\201808290629417_Initial.cs" />
+    <Compile Include="Migrations\201808290629417_Initial.Designer.cs">
+      <DependentUpon>201808290629417_Initial.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201807011730465_Initial1.cs" />
-    <Compile Include="Migrations\201807011730465_Initial1.Designer.cs">
-      <DependentUpon>201807011730465_Initial1.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\EPPPDV.cs" />
     <Compile Include="Models\LabelPoPdv.cs" />
+    <Compile Include="Models\POPDV.cs" />
+    <Compile Include="Models\POPDV1.cs" />
+    <Compile Include="Models\POPDV2.cs" />
+    <Compile Include="Models\POPDV3.cs" />
+    <Compile Include="Models\POPDV3a.cs" />
+    <Compile Include="Models\POPDV11.cs" />
+    <Compile Include="Models\POPDV6.cs" />
+    <Compile Include="Models\POPDV7.cs" />
+    <Compile Include="Models\POPDV8.cs" />
+    <Compile Include="Models\POPDV9.cs" />
+    <Compile Include="Models\POPDV9a.cs" />
+    <Compile Include="Models\POPDV10.cs" />
+    <Compile Include="Models\POPDV5.cs" />
+    <Compile Include="Models\POPDV4.cs" />
     <Compile Include="Models\PoPdvTab01.cs" />
     <Compile Include="Models\PoPdvTab02.cs" />
     <Compile Include="Models\PoPdvTab03.cs" />
@@ -218,7 +230,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\sfBanke.cs" />
     <Compile Include="Models\sfDrzave.cs" />
     <Compile Include="Models\sfMesta.cs" />
@@ -335,11 +346,8 @@
     <TypeScriptCompile Include="Scripts\index.d.ts" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201806240728261_Initial.resx">
-      <DependentUpon>201806240728261_Initial.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201807011730465_Initial1.resx">
-      <DependentUpon>201807011730465_Initial1.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201808290629417_Initial.resx">
+      <DependentUpon>201808290629417_Initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
